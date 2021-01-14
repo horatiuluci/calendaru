@@ -1,0 +1,22 @@
+<br><br><br><br><br><br><br>
+
+<mat-card class="my-card">
+  <form [formGroup]="userForm" (ngSubmit)="login()" autocomplete="off">
+
+    <mat-form-field>
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username" id="username" placeholder="Username">
+      <mat-error *ngIf="userForm.get('username').touched && userForm.get('username').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" id="password" placeholder="Password">
+      <mat-error *ngIf="userForm.get('password').touched && userForm.get('password').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <div style="text-align: center">
+      <button mat-flat-button color="primary" type="submit" [disabled]="userForm.invalid">Login</button>
+    </div>
+  </form>
+</mat-card>

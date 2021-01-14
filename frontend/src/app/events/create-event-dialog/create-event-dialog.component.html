@@ -1,0 +1,38 @@
+<form [formGroup]="createEventForm" (ngSubmit)="createEvent()" autocomplete="off">
+
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" id="title" placeholder="Title">
+      <mat-error *ngIf="createEventForm.get('title').touched && createEventForm.get('title').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description" id="description" placeholder="Description">
+        <mat-error *ngIf="createEventForm.get('description').touched && createEventForm.get('description').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Starting date</mat-label>
+        <input type="date" matInput formControlName="startDate" id="startDate" placeholder="Starting date">
+        <mat-error *ngIf="createEventForm.get('startDate').touched && createEventForm.get('startDate').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Ending date</mat-label>
+        <input type="date" matInput formControlName="endDate" id="endDate" placeholder="Ending date">
+        <mat-error *ngIf="createEventForm.get('endDate').touched && createEventForm.get('endDate').hasError('required')">Required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Other allowed users</mat-label>
+        <mat-select [formControl]="createEventForm.controls.allowedUsers" multiple>
+          <mat-option *ngFor="let user of otherAllowedUsers" [value]="user.userToEvent">{{user.username}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div style="text-align: center; margin-top: 10px">
+      <button mat-flat-button color="primary" type="submit" [disabled]="createEventForm.invalid">Create</button>
+    </div>
+
+</form>

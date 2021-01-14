@@ -1,0 +1,14 @@
+version: '3.4'
+services:
+  db:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+
+  rest-api-node:
+    build: .
+    ports:
+      - '8000:8000'
+    links:
+      - db
+    restart: on-failure

@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* My custom CSS */
+.my-card {
+    margin: auto;
+    width: 20%;
+    background-color: rgb(252,252,252);
+}
+
+.my-table {
+   margin: auto;
+   margin-top: 50px;
+   width: 50%; 
+}
