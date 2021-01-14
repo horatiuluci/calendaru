@@ -6,7 +6,7 @@ services:
       - '27017:27017'
 
   rest-api-node:
-    build: .
+    build: ./backend
     ports:
       - '8000:8000'
     links:
