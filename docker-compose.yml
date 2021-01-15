@@ -12,3 +12,8 @@ services:
     links:
       - db
     restart: on-failure
+
+  client:
+    build: ./frontend
+    ports: 
+      - '80:80'
