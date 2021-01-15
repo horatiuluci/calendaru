@@ -1,16 +1,8 @@
 FROM node:latest
 
-# RUN mkdir -p /usr/src/app
+WORKDIR /usr/app-backend
 
-# WORKDIR /usr/src/app
-
-# COPY package.json /usr/src/app/
-
-# COPY . /usr/src/app
-
-WORKDIR /usr/app
-
-COPY ./ /usr/app
+COPY . /usr/app-backend
 
 RUN npm install
 
