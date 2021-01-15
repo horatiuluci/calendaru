@@ -8,7 +8,7 @@ services:
   rest-api-node:
     build: ./backend
     ports:
-      - '8000:8000'
+      - '8000'
     links:
       - db
     restart: on-failure

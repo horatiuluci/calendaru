@@ -1,7 +1,7 @@
 {
   "name": "websecurityproject_backend",
   "version": "1.0.0",
-  "description": "Example of a simple authentication role based system",
+  "description": "Example of a simple authentication based agenda system",
   "main": "app/server.js",
   "scripts": {
     "start": "node app/server.js",
@@ -9,15 +9,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mihai10001/WebSecurityProject_Backend.git"
+    "type": "",
+    "url": ""
   },
-  "author": "Mihai",
-  "license": "ISC",
+  "author": "HLuci",
+  "license": "",
   "bugs": {
-    "url": "https://github.com/mihai10001/WebSecurityProject_Backend/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/mihai10001/WebSecurityProject_Backend#readme",
+  "homepage": "",
   "dependencies": {
     "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
