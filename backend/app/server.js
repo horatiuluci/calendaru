@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // enable cors, untill SPA/serving frontend from same process is implemented
-var corsOptions = { origin: 'http://localhost' };
+var corsOptions = { origin: 'https://localhost' };
 app.use(cors(corsOptions));
 
 dbUtils.connectToServer((err) => {
