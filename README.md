@@ -31,7 +31,7 @@ the informations in the .env file. Only new users will be added to the database 
 
 ## Installation:
 on the application folder\
-`cd salendaru`\
+`cd calendaru`\
 Run the following command to deploy:
 `sudo docker-compose up --build` 
 
